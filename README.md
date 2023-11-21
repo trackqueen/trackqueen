@@ -33,7 +33,7 @@ TrackQueen is built using:
 
 ### Getting Started
 
-1. Clone this repo: `git clone https://github.com/jcanelis/trackqueen.git`
+1. Clone this repo: `git clone https://github.com/trackqueen/trackqueen.git`
 2. Install [NVM](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash`
 3. Set Node version: `nvm use 18.12.1`
 4. Install dependencies by running `yarn` within the repo.

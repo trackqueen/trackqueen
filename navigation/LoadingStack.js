@@ -22,7 +22,7 @@ import DetailNavigationBar from "../components/DetailNavigationBar"
 const LoadingStack = ({ theme }) => {
   return (
     <>
-      <StatusBar style={"light"} />
+      <StatusBar style={theme.dark ? "light" : "dark"} />
       <NavigationContainer theme={theme}>
         <Stack.Navigator
           screenOptions={{

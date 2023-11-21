@@ -4,7 +4,7 @@
   "description": "Learn more about your music.",
   "scripts": {
     "build": "npx eas-cli build --platform android",
-    "start": "npx expo start --android -c",
+    "start": "npx expo start",
     "submit": "npx eas-cli submit -p android",
     "test": "jest",
     "eject": "expo eject",

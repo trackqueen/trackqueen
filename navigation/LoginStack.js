@@ -15,7 +15,7 @@ import LoginScreen from "../views/other/LoginScreen"
 
 const LoginStack = ({ theme }) => (
   <>
-    <StatusBar style={"light"} />
+    <StatusBar style={theme.dark ? "light" : "dark"} />
     <NavigationContainer theme={theme}>
       <Stack.Navigator>
         <Stack.Screen
