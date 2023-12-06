@@ -19,6 +19,7 @@ function Header({ copy, func, type, buttonTitle, border }) {
     require("../assets/brands/spotify/Spotify_Icon_RGB_White.png"),
     require("../assets/brands/youtube/youtube_dark.png"),
     require("../assets/brands/youtube/youtube_red.png"),
+    require("../assets/brands/openai/PNGs/openai-logomark.png"),
     require("../assets/brands/openai/PNGs/openai-white-logomark.png"),
   ])
 
@@ -44,7 +45,7 @@ function Header({ copy, func, type, buttonTitle, border }) {
   }
 
   if (type == "gpt") {
-    activeAssets = [assets[4], assets[4]]
+    activeAssets = [assets[4], assets[5]]
     dimensions = { height: 600 / 24, width: 600 / 24 }
   }
 

@@ -26,6 +26,8 @@ const _handlePressButtonAsync = async (url) => {
 
 function GPTResponse({ route }) {
   const { colors } = useTheme()
+  const theme = useTheme()
+  console.log(theme.dark)
   const queryClient = useQueryClient()
 
   // https://reactnative.dev/docs/appstate
@@ -35,6 +37,7 @@ function GPTResponse({ route }) {
   // https://docs.expo.dev/versions/latest/sdk/asset/
   const [assets, error] = useAssets([
     require("../../assets/brands/openai/PNGs/openai-white-lockup.png"),
+    require("../../assets/brands/openai/PNGs/openai-lockup.png"),
   ])
 
   const { isLoading, isError, data } = useQuery({
@@ -106,7 +109,7 @@ function GPTResponse({ route }) {
           justifyContent: "center",
         }}
       >
-        <ActivityIndicator size="large" color={colors.tertiary} />
+        <ActivityIndicator size="large" color={colors.primary} />
 
         <StatusText content={`”${route.params.query}”`} />
 
@@ -115,8 +118,8 @@ function GPTResponse({ route }) {
           style={{
             marginBottom: baseUnit * 3,
             fontWeight: 500,
-            color: colors.tertiary,
-            opacity: 0.5,
+            color: colors.onSecondaryContainer,
+            opacity: 0.75,
           }}
         >
           Responses from ChatGPT take a few seconds.
@@ -124,7 +127,7 @@ function GPTResponse({ route }) {
         {assets && !error && (
           <Image
             style={{ opacity: 1 }}
-            source={assets[0].localUri}
+            source={theme.dark ? assets[0].localUri : assets[1].localUri}
             width={2200 / 24}
             height={598 / 24}
           />
@@ -188,7 +191,7 @@ function GPTResponse({ route }) {
         padding: baseUnit * 3,
       }}
     >
-      <Text variant={"labelSmall"} style={{ color: colors.tertiary }}>
+      <Text variant={"bodyLarge"} style={{ color: colors.tertiary }}>
         {data.choices[0].message.content.trim().trim()}
       </Text>
 

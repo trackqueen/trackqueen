@@ -15,8 +15,8 @@ const Chip = ({ text, action }) => {
       mode={"flat"}
       ellipsizeMode={"tail"}
       compact={false}
-      style={{ backgroundColor: colors.tertiary }}
-      textStyle={{ color: colors.onPrimary, padding: baseUnit * 1 }}
+      style={{ backgroundColor: colors.onSurfaceVariant }}
+      textStyle={{ color: colors.inverseOnSurface, padding: baseUnit * 1 }}
       onPress={() => {
         action()
       }}
